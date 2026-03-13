@@ -34,11 +34,9 @@ nav a:hover{
 }
 
 .profile{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:20px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
 }
 
 .skills{
