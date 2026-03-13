@@ -22,8 +22,7 @@ gap:30px;
 .about img{
 width:15px;
 height:15px;
-border-radius:50%;
-obeject-fit: cover;
+border-radius:20%;
 }
 
 .projects{
