@@ -1,52 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Arnab Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnab Bose | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
     <h1>Arnab Bose</h1>
-    <p>CSE Student | Programmer</p>
+    <p>Computer Science Student | Web Developer</p>
 </header>
 
-<section class="about">
-    <img src="profile.jpg" alt="My Photo">
-    <div>
-        <h2>About Me</h2>
-        <p>I am a Computer Science student. I like C++, Python and Web Development.</p>
-    </div>
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="container">
+    <img src="profile.jpg" class="profile">
+    <h2>About Me</h2>
+    <p>
+        I am a Computer Science student interested in programming, 
+        web development, and problem solving. I enjoy building 
+        websites using HTML, CSS, and JavaScript and learning new technologies.
+    </p>
 </section>
 
-<section class="projects">
-    <h2>My Projects</h2>
+<section id="skills" class="container">
+    <h2>Skills</h2>
 
-    <div class="project-card">
-        <h3>FCFS Scheduling</h3>
-        <p>C++ program to calculate CT, TAT and WT.</p>
-    </div>
-
-    <div class="project-card">
-        <h3>Round Robin Scheduling</h3>
-        <p>CPU scheduling simulation using C++.</p>
-    </div>
-
-    <div class="project-card">
-        <h3>Voice Search Web App</h3>
-        <p>Voice search web application project.</p>
+    <div class="skills">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>C++</div>
+        <div>Python</div>
+        <div>SQL</div>
+        <div>Git & GitHub</div>
     </div>
 
 </section>
 
-<section class="contact">
-<h2>Contact</h2>
-<p>Email: yourmail@gmail.com</p>
+<section id="projects" class="container">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website built using HTML and CSS.</p>
+    </div>
+
+    <div class="project">
+        <h3>Scheduling Algorithm Simulator</h3>
+        <p>Implemented FCFS, Round Robin, and Priority Scheduling using C++.</p>
+    </div>
+
+    <div class="project">
+        <h3>Database Query System</h3>
+        <p>Created SQL queries for managing university course data.</p>
+    </div>
+
+</section>
+
+<section id="contact" class="container">
+    <h2>Contact</h2>
+
+    <p>Email: arnab@example.com</p>
+    <p>GitHub: github.com/arnab</p>
+    <p>LinkedIn: linkedin.com/in/arnab</p>
+
 </section>
 
 <footer>
-<p>© 2026 Arnab Bose</p>
+    <p>© 2026 Arnab Bose | Portfolio</p>
 </footer>
 
 </body>
