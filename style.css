@@ -68,7 +68,7 @@ a{text-decoration:none;}
 .contact-section{text-align:center;padding:40px 20px;}
 .contact-section .social{margin-top:10px;}
 .contact-section .social a{margin:0 15px;font-weight:500;color:#333;transition:.3s;}
-.contact-section .social a:hover{color:#fff;}
+.contact-section .social a:hover{color:#00adb5;}
 
 /* FOOTER */
 footer{text-align:center;padding:20px;margin-top:40px;background:#222;color:#fff;}
