@@ -12,3 +12,9 @@ document.querySelectorAll('.skill-bar span').forEach((bar) => {
     const width = bar.style.width || '80%';
     bar.style.setProperty('--skill-width', width);
 });
+
+// OPTIONAL: HIGHLIGHT TABLE ROW ON HOVER
+document.querySelectorAll('.academics-section tr').forEach(row => {
+    row.addEventListener('mouseenter', () => {row.style.backgroundColor = '#e0f7fa';});
+    row.addEventListener('mouseleave', () => {row.style.backgroundColor = '';});
+});
