@@ -62,8 +62,8 @@ a{text-decoration:none;}
 
 /* CV BUTTON */
 .cv-btn-wrapper {
-    text-align: center; /* Centers the button horizontally */
-    margin-top: 20px;   /* Optional spacing from above */
+    text-align: center;
+    margin-top: 20px;   
 }
 
 .cv-btn {
