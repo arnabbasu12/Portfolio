@@ -62,13 +62,24 @@ a{text-decoration:none;}
 
 /* CV BUTTON */
 .cv-btn-wrapper {
-    display: flex;
-    justify-content: center; 
-    margin-top: 20px;       
+    text-align: center; /* Centers the button horizontally */
+    margin-top: 20px;   /* Optional spacing from above */
 }
-.cv-btn{background:#00adb5;color:#fff;padding:12px 25px;border:none;border-radius:8px;cursor:pointer;font-size:17px;transition:.3s;}
-.cv-btn:hover{background:#007f87;}
 
+.cv-btn {
+    background: #00adb5;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    background: #007f87;
+}
 /* CONTACT */
 .contact-section{text-align:center;padding:40px 20px;}
 .contact-section .social{margin-top:10px;}
