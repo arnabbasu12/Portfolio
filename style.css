@@ -61,13 +61,17 @@ a{text-decoration:none;}
 .achievements li::before{content:"✔";position:absolute;left:0;color:#00adb5;}
 
 /* CV BUTTON WRAPPER */
-.cv-btn-wrapper {
-    display: flex;              
-    justify-content: center;  
-    margin-top: 20px;          
+.cv-section {
+    text-align: center; /* optional, centers the heading too */
+    padding: 40px 20px; /* spacing around section */
 }
 
-/* CV BUTTON STYLING */
+.cv-btn-wrapper {
+    display: flex;
+    justify-content: center; /* centers the button horizontally */
+    margin-top: 20px;        /* spacing below heading */
+}
+
 .cv-btn {
     background: #00adb5;
     color: #fff;
@@ -76,7 +80,9 @@ a{text-decoration:none;}
     border-radius: 8px;
     cursor: pointer;
     font-size: 17px;
+    text-decoration: none; /* remove underline from link */
     transition: 0.3s;
+    display: inline-block;
 }
 
 .cv-btn:hover {
