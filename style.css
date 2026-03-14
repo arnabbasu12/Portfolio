@@ -61,7 +61,7 @@ a{text-decoration:none;}
 .achievements li::before{content:"✔";position:absolute;left:0;color:#00adb5;}
 
 /* CV BUTTON */
-.cv-btn{background:#00adb5;color:#fff;padding:12px 25px;border:none;align-btn:center;border-radius:8px;cursor:pointer;font-size:17px;transition:.3s;}
+.cv-btn{background:#00adb5;color:#fff;padding:12px 25px;border:none;text-align:center;border-radius:8px;cursor:pointer;font-size:17px;transition:.3s;}
 .cv-btn:hover{background:#007f87;}
 
 /* CONTACT */
