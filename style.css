@@ -60,12 +60,14 @@ a{text-decoration:none;}
 .achievements li{font-size:17px;margin-bottom:10px;position:relative;padding-left:25px;}
 .achievements li::before{content:"✔";position:absolute;left:0;color:#00adb5;}
 
-/* CV BUTTON */
+/* CV BUTTON WRAPPER */
 .cv-btn-wrapper {
-    text-align: center;
-    margin-top: 20px;   
+    display: flex;              
+    justify-content: center;  
+    margin-top: 20px;          
 }
 
+/* CV BUTTON STYLING */
 .cv-btn {
     background: #00adb5;
     color: #fff;
