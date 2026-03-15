@@ -3,167 +3,629 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arnab Basu | Portfolio</title>
+
+<title>Arnab Basu | Developer Portfolio</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#020617;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.menu{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(-45deg,#0ea5e9,#6366f1,#9333ea,#22c55e);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.hero-content{
+max-width:700px;
+}
+
+/* PROFILE IMAGE */
+
+.hero-pic{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+margin-top:20px;
+border:5px solid white;
+box-shadow:0 0 25px rgba(255,255,255,0.8);
+transition:0.4s;
+}
+
+.hero-pic:hover{
+transform:scale(1.05);
+}
+
+/* NAME */
+
+.hero h2{
+margin-top:15px;
+font-size:30px;
+font-weight:600;
+}
+
+/* TYPING TEXT */
+
+.hero p{
+margin-top:10px;
+font-size:20px;
+color:#f1f5f9;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+margin-top:25px;
+}
+
+.hero button,
+.btn2{
+padding:12px 28px;
+margin:10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+text-decoration:none;
+}
+
+.hero button{
+background:white;
+color:black;
+}
+
+.btn2{
+background:#38bdf8;
+color:black;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:24px;
+}
+
+.hero-pic{
+width:140px;
+height:140px;
+}
+
+}
+
+/* SECTION */
+
+.section{
+padding:80px 8%;
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+/* ABOUT */
+
+.about{
+display:flex;
+align-items:center;
+gap:50px;
+}
+
+.about img{
+width:260px;
+border-radius:12px;
+}
+
+/* SKILLS */
+
+.skills{
+max-width:700px;
+margin:auto;
+}
+
+.skill{
+margin:15px 0;
+}
+
+.skill-bar{
+background:#1e293b;
+height:10px;
+border-radius:10px;
+}
+
+.skill-bar span{
+display:block;
+height:100%;
+background:#38bdf8;
+border-radius:10px;
+width:0;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.project{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-8px);
+}
+
+/* GALLERY */
+
+.gallery{
+display:flex;
+overflow-x:auto;
+gap:15px;
+}
+
+.gallery img{
+width:250px;
+border-radius:10px;
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid #334155;
+padding:10px;
+text-align:center;
+}
+
+/* CV */
+
+.cv{
+text-align:center;
+}
+
+.cv a{
+background:#38bdf8;
+padding:12px 30px;
+color:black;
+text-decoration:none;
+border-radius:6px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.social a{
+margin:10px;
+display:inline-block;
+color:#38bdf8;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+flex-direction:column;
+background:#020617;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+}
+
+nav ul.active{
+display:flex;
+}
+
+.menu{
+display:block;
+}
+
+.about{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <h2 class="logo">Arnab Basu</h2>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#cv">Download CV</a></li>
-    </ul>
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>Arnab Basu</h2>
+
+<div class="menu" id="menu">☰</div>
+
+<ul id="navlinks">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#academics">Academics</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
 </nav>
 
-<!-- Hero Section -->
-<header class="hero">
-    <h1>Hello, I'm Arnab Basu</h1>
-    <p>Web Developer | Programmer | Tech Enthusiast</p>
-</header>
+<!-- HERO -->
 
-<!-- Profile Section -->
-<section class="profile-section">
-    <img src="profile.jpg" class="profile-pic" alt="Arnab Basu">
-    <h3 class="profile-name">Arnab Basu</h3>
-    <p class="profile-title">Computer Science Student</p>
+<section id = "home" class="hero">
+
+<div class="hero-content">
+
+<h1>Hi,Welcome. I am Arnab</h1>
+
+<img src="profile.jpg" class="hero-pic" alt="Arnab Basu">
+
+<h2>Arnab Basu</h2>
+
+<p id="typing"></p>
+
+<div class="hero-buttons">
+<button onclick="document.getElementById('contact').scrollIntoView()">Hire Me</button>
+<a href="#projects" class="btn2">View Projects</a>
+</div>
+
+</div>
+
 </section>
 
-<hr>
+<!-- ABOUT -->
 
-<!-- About Section -->
-<section id="about" class="about-section">
-    <div class="about-container">
-        <img src="profile.jpg" alt="Arnab Basu">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-                I am a <span class="highlight">Computer Science student</span> with a strong interest
-                in applied research in <b>Artificial Intelligence, Web Development, Data Science, 
-                and emerging technologies</b>. Currently pursuing a Bachelor's in 
-                <b>Computer Science and Engineering at Northern University Bangladesh</b>.
-            </p>
-            <p>
-                My research interests include <b>AI, Machine Learning, Deep Learning, Computer Vision</b>
-                and intelligent automation. I enjoy applying these technologies to solve 
-                <span class="highlight">real-world industrial challenges</span>.
-            </p>
-            <p>
-                My goal is to become a <b>professional Data Scientist and researcher</b> contributing
-                to impactful research and innovative technologies.
-            </p>
-        </div>
-    </div>
+<section id="about" class="section">
+
+<h2>About Me</h2>
+
+<div class="about">
+
+<img src="profile.jpg">
+
+<p>
+I am a Computer Science student passionate about Artificial Intelligence,
+Web Development and Data Science. I enjoy building modern software and
+solving real-world problems using technology.
+</p>
+
+</div>
+
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-    <h2>My Skills</h2>
-    <div class="skills-container">
-        <div class="skill"><p>HTML</p><div class="skill-bar"><span data-width="95%"></span></div></div>
-        <div class="skill"><p>CSS</p><div class="skill-bar"><span data-width="90%"></span></div></div>
-        <div class="skill"><p>JavaScript</p><div class="skill-bar"><span data-width="85%"></span></div></div>
-        <div class="skill"><p>Python</p><div class="skill-bar"><span data-width="80%"></span></div></div>
-        <div class="skill"><p>C++</p><div class="skill-bar"><span data-width="75%"></span></div></div>
-        <div class="skill"><p>SQL</p><div class="skill-bar"><span data-width="80%"></span></div></div>
-    </div>
+<!-- SKILLS -->
+
+<section id="skills" class="section">
+
+<h2>My Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+<p>HTML</p>
+<div class="skill-bar"><span data-width="95%"></span></div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="skill-bar"><span data-width="90%"></span></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="skill-bar"><span data-width="85%"></span></div>
+</div>
+
+<div class="skill">
+<p>Python</p>
+<div class="skill-bar"><span data-width="80%"></span></div>
+</div>
+
+<div class="skill">
+<p>C++</p>
+<div class="skill-bar"><span data-width="75%"></span></div>
+</div>
+
+</div>
+
 </section>
 
-<!-- Academic Table -->
-<section id="academics" class="academics-section container">
-    <h2>Academic Qualifications</h2>
-    <table>
-        <tr>
-            <th>Degree</th>
-            <th>Institution</th>
-            <th>Year</th>
-            <th>Department</th>
-        </tr>
-        <tr>
-            <td>BSc (on going)</td>
-            <td>Northern University of Business and Technology, Khulna.</td>
-            <td>2026</td>
-            <td>Computer Science and Engineering</td>
-        </tr>
-        <tr>
-            <td>HSC</td>
-            <td>Govt. Gopalgonj College</td>
-            <td>2021</td>
-            <td>Science</td>
-        </tr>
-        <tr>
-            <td>SSC</td>
-            <td>Dumaria High School</td>
-            <td>2019</td>
-            <td>Science</td>
-        </tr>
-    </table>
+<!-- PROJECTS -->
+
+<section id="projects" class="section">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Personal developer portfolio built using modern web technologies.</p>
+</div>
+
+<div class="project">
+<h3>Scheduling Algorithms</h3>
+<p>Implemented FCFS, Round Robin and Priority Scheduling in C++.</p>
+</div>
+
+<div class="project">
+<h3>Database Management</h3>
+<p>Created SQL queries for managing university database systems.</p>
+</div>
+
+</div>
+
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <h2>Projects</h2>
-    <div class="projects-container">
-        <div class="project-card"><h3>Portfolio Website</h3><p>My personal portfolio built using HTML, CSS, and JavaScript.</p></div>
-        <div class="project-card"><h3>Scheduling Algorithm Simulator</h3><p>Implemented FCFS, Round Robin, and Priority Scheduling in C++.</p></div>
-        <div class="project-card"><h3>Database Management System</h3><p>Created SQL queries for managing university course data.</p></div>
-    </div>
+<!-- GALLERY -->
+
+<section id="gallery" class="section">
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+
+</div>
+
 </section>
 
-<!-- Gallery -->
-<section id="gallery" class="gallery-section">
-    <h2>Gallery</h2>
-    <div class="carousel">
-        <img src="img1.jpg" alt="Gallery 1">
-        <img src="img2.jpg" alt="Gallery 2">
-        <img src="img3.jpg" alt="Gallery 3">
-        <img src="img4.jpg" alt="Gallery 4">
-    </div>
+<!-- ACADEMICS -->
+
+<section id="academics" class="section">
+
+<h2>Academic Qualifications</h2>
+
+<table>
+
+<tr>
+<th>Degree</th>
+<th>Institution</th>
+<th>Year</th>
+<th>Department</th>
+</tr>
+
+<tr>
+<td>BSc (Ongoing)</td>
+<td>Northern University</td>
+<td>2026</td>
+<td>CSE</td>
+</tr>
+
+<tr>
+<td>HSC</td>
+<td>Govt. Gopalganj College</td>
+<td>2021</td>
+<td>Science</td>
+</tr>
+
+<tr>
+<td>SSC</td>
+<td>Dumaria High School</td>
+<td>2019</td>
+<td>Science</td>
+</tr>
+
+</table>
+
 </section>
 
-<!-- Achievements -->
-<section id="achievements" class="achievements-section">
-    <h2>Achievements</h2>
-    <ul class="achievements">
-        <li>Developed Personal Portfolio Website</li>
-        <li>Implemented Scheduling Algorithms in C++</li>
-        <li>Strong knowledge in SQL and Database Systems</li>
-        <li>Won first place in district level essay competition</li>
-    </ul>
+<!-- CV -->
+
+<section class="section cv">
+
+<h2>Download My CV</h2>
+
+<a href="https://drive.google.com/file/d/1ett9pe81M1eeI0AvX1tXaMv-LBEKCQ3b/view">
+Download CV
+</a>
+
 </section>
 
-<!-- Download CV -->
-<section id="cv" class="cv-section">
-    <h2>Download My CV</h2>
-    <div class="cv-btn-wrapper">
-        <a href="https://drive.google.com/file/d/1ett9pe81M1eeI0AvX1tXaMv-LBEKCQ3b/view?usp=drivesdk" class="cv-btn" rel="noopener">
-            Download CV
-        </a>
-    </div>
-</section>
+<!-- CONTACT -->
 
-<!-- Contact -->
-<section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <p>Mobile: 01568697355</p>
-    <div class="social">
-        <a href="mailto: arnabcseofficial14@gmail.com">Email: arnabcseofficial14@gmail.com</a></p>
-        <a href="https://github.com/arnabbasu12">GitHub</a>
-        <a href="https://www.linkedin.com/in/arnab-bose-96bb7b317/">LinkedIn</a>
-    </div>
+<section id="contact" class="section contact">
+
+<h2>Contact Me</h2>
+
+<p>Mobile: 01568697355</p>
+
+<div class="social">
+
+<a href="mailto:arnabcseofficial14@gmail.com">Email</a>
+
+<a href="https://github.com/arnabbasu12">GitHub</a>
+
+<a href="https://www.linkedin.com/in/arnab-bose-96bb7b317/">LinkedIn</a>
+
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Arnab Basu | Portfolio</p>
+
+<p>© 2026 Arnab Basu | Developer Portfolio</p>
+
 </footer>
 
-<script src="script.js"></script>
+<script>
+
+/* MOBILE MENU */
+
+document.getElementById("menu").onclick=function(){
+document.getElementById("navlinks").classList.toggle("active")
+}
+
+/* TYPING ANIMATION */
+
+const words=["Web Developer","Programmer","CSE Student","Tech Enthusiast"]
+
+let i=0
+let j=0
+let current=""
+let isDeleting=false
+
+function type(){
+
+current=words[i]
+
+if(!isDeleting){
+document.getElementById("typing").textContent=current.slice(0,++j)
+}else{
+document.getElementById("typing").textContent=current.slice(0,--j)
+}
+
+if(j==current.length){
+isDeleting=true
+setTimeout(type,1000)
+return
+}
+
+if(j==0){
+isDeleting=false
+i=(i+1)%words.length
+}
+
+setTimeout(type,isDeleting?60:120)
+
+}
+
+type()
+
+/* SCROLL REVEAL */
+
+const sections=document.querySelectorAll(".section")
+
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top
+if(top<window.innerHeight-100){
+sec.classList.add("show")
+}
+})
+})
+
+/* SKILL ANIMATION */
+
+const skills=document.querySelectorAll(".skill-bar span")
+
+window.addEventListener("scroll",()=>{
+skills.forEach(skill=>{
+const width=skill.getAttribute("data-width")
+if(skill.getBoundingClientRect().top<window.innerHeight){
+skill.style.width=width
+}
+})
+})
+
+</script>
+
 </body>
 </html>
+```
