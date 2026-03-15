@@ -256,7 +256,54 @@ padding:10px;
 text-align:center;
 }
 
-/* CV */
+/* ACHIEVEMENTS SECTION RESPONSIVE */
+.achievements-section {
+    text-align: center;      /* centers heading and list container */
+    padding: 50px 20px;      /* adds top and bottom spacing for PC and mobile */
+}
+
+.achievements-section h2 {
+    margin-bottom: 30px;     /* gap after heading */
+    font-size: 32px;
+}
+
+.achievements {
+    display: inline-block;    /* shrink-wrap the list */
+    list-style: none;         /* remove bullets */
+    padding: 0;
+    margin: 0 auto;           /* horizontal center */
+    text-align: left;         /* text aligns nicely with checkmarks */
+}
+
+.achievements li {
+    font-size: 17px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;       /* space for checkmark */
+}
+
+.achievements li::before {
+    content: "✔";             /* checkmark */
+    position: absolute;
+    left: 0;
+    color: #00adb5;
+    font-weight: bold;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .achievements-section {
+        padding: 40px 10px;   /* less padding on mobile */
+    }
+    .achievements-section h2 {
+        font-size: 26px;      /* smaller heading for mobile */
+    }
+    .achievements li {
+        font-size: 16px;      /* smaller text on mobile */
+        padding-left: 25px;   /* adjust checkmark spacing */
+    }
+}
+/*CV*/
 
 .cv{
 text-align:center;
@@ -346,6 +393,7 @@ font-size:32px;
 <li><a href="#projects">Projects</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#academics">Academics</a></li>
+<li><a href="#achievements">Achievements</a></li>
 <li><a href="#contact">Contact</a></li>
 
 </ul>
@@ -385,7 +433,7 @@ font-size:32px;
 
 <img src="profile.jpg">
 
-             <p>
+            <p>
                 I am a <span class="highlight">Computer Science student</span> with a strong interest
                 in applied research in <b>Artificial Intelligence, Web Development, Data Science, 
                 and emerging technologies</b>. Currently pursuing a Bachelor's in 
@@ -502,8 +550,8 @@ font-size:32px;
 </tr>
 
 <tr>
-<td>BSc (On progress)</td>
-<td>Northern University of Business and Technology,Khulna</td>
+<td>BSc (Ongoing)</td>
+<td>Northern University</td>
 <td>2026</td>
 <td>CSE</td>
 </tr>
@@ -525,6 +573,19 @@ font-size:32px;
 </table>
 
 </section>
+<!-- Achievements -->
+<section id="achievements" class="achievements-section">
+
+    <h2>Achievements</h2>
+
+    <ul class="achievements">
+        <li>Developed Personal Portfolio Website</li>
+        <li>Implemented Scheduling Algorithms in C++</li>
+        <li>Strong knowledge in SQL and Database Systems</li>
+        <li>Won first place in district level essay competition</li>
+    </ul>
+</section>
+
 
 <!-- CV -->
 
