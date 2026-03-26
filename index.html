@@ -7,6 +7,7 @@
 <title>Arnab Basu | Developer Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 
@@ -258,32 +259,32 @@ text-align:center;
 
 /* ACHIEVEMENTS SECTION RESPONSIVE */
 .achievements-section {
-    text-align: center;      /* centers heading and list container */
-    padding: 50px 20px;      /* adds top and bottom spacing for PC and mobile */
+    text-align: center;
+    padding: 50px 20px;
 }
 
 .achievements-section h2 {
-    margin-bottom: 30px;     /* gap after heading */
+    margin-bottom: 30px;
     font-size: 32px;
 }
 
 .achievements {
-    display: inline-block;    /* shrink-wrap the list */
-    list-style: none;         /* remove bullets */
+    display: inline-block;
+    list-style: none;
     padding: 0;
-    margin: 0 auto;           /* horizontal center */
-    text-align: left;         /* text aligns nicely with checkmarks */
+    margin: 0 auto;
+    text-align: left;
 }
 
 .achievements li {
     font-size: 17px;
     margin-bottom: 15px;
     position: relative;
-    padding-left: 30px;       /* space for checkmark */
+    padding-left: 30px;
 }
 
 .achievements li::before {
-    content: "✔";             /* checkmark */
+    content: "✔";
     position: absolute;
     left: 0;
     color: #00adb5;
@@ -293,17 +294,18 @@ text-align:center;
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
     .achievements-section {
-        padding: 40px 10px;   /* less padding on mobile */
+        padding: 40px 10px;
     }
     .achievements-section h2 {
-        font-size: 26px;      /* smaller heading for mobile */
+        font-size: 26px;
     }
     .achievements li {
-        font-size: 16px;      /* smaller text on mobile */
-        padding-left: 25px;   /* adjust checkmark spacing */
+        font-size: 16px;
+        padding-left: 25px;
     }
 }
-/*CV*/
+
+/* CV */
 
 .cv{
 text-align:center;
@@ -324,9 +326,16 @@ text-align:center;
 }
 
 .social a{
-margin:10px;
+margin:0 15px;
 display:inline-block;
 color:#38bdf8;
+font-size:28px;
+transition: transform 0.3s, color 0.3s;
+}
+
+.social a:hover{
+color:#0ea5e9;
+transform: scale(1.2);
 }
 
 /* FOOTER */
@@ -338,7 +347,7 @@ background:#020617;
 margin-top:40px;
 }
 
-/* MOBILE */
+/* MOBILE NAVBAR */
 
 @media(max-width:768px){
 
@@ -386,7 +395,6 @@ font-size:32px;
 <div class="menu" id="menu">☰</div>
 
 <ul id="navlinks">
-
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -395,18 +403,17 @@ font-size:32px;
 <li><a href="#academics">Academics</a></li>
 <li><a href="#achievements">Achievements</a></li>
 <li><a href="#contact">Contact</a></li>
-
 </ul>
 
 </nav>
 
 <!-- HERO -->
 
-<section id = "home" class="hero">
+<section id="home" class="hero">
 
 <div class="hero-content">
 
-<h1>Hi,Welcome. I am Arnab</h1>
+<h1>Hi, Welcome. I am Arnab</h1>
 
 <img src="profile.jpg" class="hero-pic" alt="Arnab Basu">
 
@@ -433,21 +440,21 @@ font-size:32px;
 
 <img src="profile.jpg">
 
-            <p>
-                I am a <span class="highlight">Computer Science student</span> with a strong interest
-                in applied research in <b>Artificial Intelligence, Web Development, Data Science, 
-                and emerging technologies</b>. Currently pursuing a Bachelor's in 
-                <b>Computer Science and Engineering at Northern University Bangladesh</b>.
-            </p>
-            <p>
-                My research interests include <b>AI, Machine Learning, Deep Learning, Computer Vision</b>
-                and intelligent automation. I enjoy applying these technologies to solve 
-                <span class="highlight">real-world industrial challenges</span>.
-            </p>
-            <p>
-                My goal is to become a <b>professional Data Scientist and researcher</b> contributing
-                to impactful research and innovative technologies.
-            </p>
+<p>
+I am a <span class="highlight">Computer Science student</span> with a strong interest
+in applied research in <b>Artificial Intelligence, Web Development, Data Science, 
+and emerging technologies</b>. Currently pursuing a Bachelor's in 
+<b>Computer Science and Engineering at Northern University Bangladesh</b>.
+</p>
+<p>
+My research interests include <b>AI, Machine Learning, Deep Learning, Computer Vision</b>
+and intelligent automation. I enjoy applying these technologies to solve 
+<span class="highlight">real-world industrial challenges</span>.
+</p>
+<p>
+My goal is to become a <b>professional Data Scientist and researcher</b> contributing
+to impactful research and innovative technologies.
+</p>
 
 </div>
 
@@ -573,19 +580,21 @@ font-size:32px;
 </table>
 
 </section>
+
 <!-- Achievements -->
+
 <section id="achievements" class="achievements-section">
 
-    <h2>Achievements</h2>
+<h2>Achievements</h2>
 
-    <ul class="achievements">
-        <li>Developed Personal Portfolio Website</li>
-        <li>Implemented Scheduling Algorithms in C++</li>
-        <li>Strong knowledge in SQL and Database Systems</li>
-        <li>Won first place in district level essay competition</li>
-    </ul>
+<ul class="achievements">
+<li>Developed Personal Portfolio Website</li>
+<li>Implemented Scheduling Algorithms in C++</li>
+<li>Strong knowledge in SQL and Database Systems</li>
+<li>Won first place in district level essay competition</li>
+</ul>
+
 </section>
-
 
 <!-- CV -->
 
@@ -593,7 +602,7 @@ font-size:32px;
 
 <h2>Download My CV</h2>
 
-<a href="https://drive.google.com/file/d/1ett9pe81M1eeI0AvX1tXaMv-LBEKCQ3b/view">
+<a href="https://drive.google.com/file/d/1ett9pe81M1eeI0AvX1tXaMv-LBEKCQ3b/view" target="_blank">
 Click to Download
 </a>
 
@@ -608,13 +617,17 @@ Click to Download
 <p>Mobile: 01568697355</p>
 
 <div class="social">
+<a href="mailto:arnabcseofficial14@gmail.com" target="_blank">
+<i class="fas fa-envelope"></i>
+</a>
 
-<a href="mailto:arnabcseofficial14@gmail.com">Email</a>
+<a href="https://github.com/arnabbasu12" target="_blank">
+<i class="fab fa-github"></i>
+</a>
 
-<a href="https://github.com/arnabbasu12">GitHub</a>
-
-<a href="https://www.linkedin.com/in/arnab-bose-96bb7b317/">LinkedIn</a>
-
+<a href="https://www.linkedin.com/in/arnab-bose-96bb7b317/" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
 </div>
 
 </section>
@@ -628,13 +641,11 @@ Click to Download
 <script>
 
 /* MOBILE MENU */
-
 document.getElementById("menu").onclick=function(){
 document.getElementById("navlinks").classList.toggle("active")
 }
 
 /* TYPING ANIMATION */
-
 const words=["Web Developer","Programmer","CSE Student","Tech Enthusiast"]
 
 let i=0
@@ -643,7 +654,6 @@ let current=""
 let isDeleting=false
 
 function type(){
-
 current=words[i]
 
 if(!isDeleting){
@@ -664,13 +674,11 @@ i=(i+1)%words.length
 }
 
 setTimeout(type,isDeleting?60:120)
-
 }
 
 type()
 
 /* SCROLL REVEAL */
-
 const sections=document.querySelectorAll(".section")
 
 window.addEventListener("scroll",()=>{
@@ -683,7 +691,6 @@ sec.classList.add("show")
 })
 
 /* SKILL ANIMATION */
-
 const skills=document.querySelectorAll(".skill-bar span")
 
 window.addEventListener("scroll",()=>{
@@ -699,4 +706,3 @@ skill.style.width=width
 
 </body>
 </html>
-```
