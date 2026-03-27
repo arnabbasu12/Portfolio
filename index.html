@@ -233,17 +233,36 @@ transform:translateY(-8px);
 
 /* GALLERY */
 
+/* GALLERY FIXED */
+
 .gallery{
-display:flex;
-overflow-x:auto;
-gap:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding-top:20px;
 }
 
 .gallery img{
-width:250px;
-border-radius:10px;
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+transition:0.3s;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
+.gallery img:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.gallery img{
+height:180px;
+}
+}
 /* TABLE */
 
 table{
@@ -532,15 +551,14 @@ to impactful research and innovative technologies.
 
 <div class="gallery">
 
-<img src="pic1.jpg">
-<img src="pic2.jpg">
-<img src="pic3.jpg">
-<img src="img4.jpg">
+<img src="pic1.jpg" alt="Gallery Image 1">
+<img src="photo2.jpg" alt="Gallery Image 2">
+<img src="pic3.jpg" alt="Gallery Image 3">
+<img src="img4.jpg" alt="Gallery Image 4">
 
 </div>
 
 </section>
-
 <!-- ACADEMICS -->
 
 <section id="academics" class="section">
